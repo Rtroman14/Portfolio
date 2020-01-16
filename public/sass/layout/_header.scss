@@ -21,13 +21,9 @@
     &-1 {
         display: inline-block;
         font-family: brush-script-std, sans-serif;
-        font-size: 7rem;
+        font-size: 6rem;
         color: $color-trim;
         animation-duration: 1.3s;
-
-        @media only screen and (max-width: $bp-md) {
-            font-size: 6rem;
-        }
 
         @media only screen and (max-width: $bp-sm) {
             font-size: 5.6rem;
@@ -37,14 +33,10 @@
     &-2 {
         display: inline-block;
         font-family: brush-script-std, sans-serif;
-        font-size: 7rem;
+        font-size: 6rem;
         color: $color-trim;
         animation-duration: 1.3s;
         animation-delay: 0.4s;
-
-        @media only screen and (max-width: $bp-md) {
-            font-size: 6rem;
-        }
 
         @media only screen and (max-width: $bp-sm) {
             font-size: 5.6rem;

@@ -51,12 +51,9 @@ body {
 
 .heading-primary {
   font-family: "Be Vietnam", sans-serif;
-  font-size: 6rem;
+  font-size: 5rem;
   font-weight: 300;
   color: #fff; }
-  @media only screen and (max-width: 62.5em) {
-    .heading-primary {
-      font-size: 5rem; } }
   @media only screen and (max-width: 50em) {
     .heading-primary {
       font-size: 4.5rem; } }
@@ -247,12 +244,9 @@ body {
 .letterR-1 {
   display: inline-block;
   font-family: brush-script-std, sans-serif;
-  font-size: 7rem;
+  font-size: 6rem;
   color: #dc143c;
   animation-duration: 1.3s; }
-  @media only screen and (max-width: 62.5em) {
-    .letterR-1 {
-      font-size: 6rem; } }
   @media only screen and (max-width: 50em) {
     .letterR-1 {
       font-size: 5.6rem; } }
@@ -260,13 +254,10 @@ body {
 .letterR-2 {
   display: inline-block;
   font-family: brush-script-std, sans-serif;
-  font-size: 7rem;
+  font-size: 6rem;
   color: #dc143c;
   animation-duration: 1.3s;
   animation-delay: 0.4s; }
-  @media only screen and (max-width: 62.5em) {
-    .letterR-2 {
-      font-size: 6rem; } }
   @media only screen and (max-width: 50em) {
     .letterR-2 {
       font-size: 5.6rem; } }

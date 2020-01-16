@@ -17,13 +17,9 @@ body {
 
 .heading-primary {
     font-family: $font-header;
-    font-size: 6rem;
+    font-size: 5rem;
     font-weight: 300;
     color: #fff;
-
-    @media only screen and (max-width: $bp-md) {
-        font-size: 5rem;
-    }
 
     @media only screen and (max-width: $bp-sm) {
         font-size: 4.5rem;
