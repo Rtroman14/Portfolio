@@ -22,5 +22,5 @@
 
 @mixin grid {
     display: grid;
-    grid-template-columns: 1.5fr [ main-start ] repeat(6, 1fr) [ main-end ] 1.5fr;
+    grid-template-columns: 1.5fr [ main-start ] repeat(4, 1fr) [ main-end ] 1.5fr;
 }

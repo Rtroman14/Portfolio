@@ -5,7 +5,7 @@
 
     &__container {
         height: 100%;
-        width: 30vw;
+        width: 25vw;
         display: flex;
         justify-content: space-evenly;
         align-items: center;
@@ -13,9 +13,9 @@
     }
 
     &__items {
-        width: 25vw;
+        width: 100%;
         display: flex;
-        justify-content: space-between;
+        justify-content: space-evenly;
     }
 
     &__item {

@@ -60,7 +60,7 @@ body {
 
 .heading-secondary {
   font-family: "Be Vietnam", sans-serif;
-  font-size: 3.2rem;
+  font-size: 2.6rem;
   font-weight: 500;
   display: inline-block;
   line-height: 1.2;
@@ -69,7 +69,7 @@ body {
 
 .heading-tertiary {
   font-family: "Be Vietnam", sans-serif;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   font-weight: 400;
   text-transform: uppercase;
   color: #dc143c; }
@@ -98,17 +98,17 @@ body {
 
 .about {
   display: grid;
-  grid-template-columns: 1.5fr [main-start] repeat(6, 1fr) [main-end] 1.5fr; }
+  grid-template-columns: 1.5fr [main-start] repeat(4, 1fr) [main-end] 1.5fr; }
   @media only screen and (max-width: 50em) {
     .about {
       grid-template-columns: 0.5fr [main-start] repeat(6, 1fr) [main-end] 0.5fr; } }
   .about__me {
-    grid-column: main-start / span 3;
+    grid-column: main-start / span 2;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center; }
   .about__pic {
-    height: 42rem;
+    height: 40rem;
     border-radius: 50%;
     box-shadow: -3rem 3rem 0 #f2f2f2; }
     @media only screen and (max-width: 87.5em) {
@@ -118,8 +118,7 @@ body {
       .about__pic {
         height: 36rem; } }
   .about__text {
-    grid-column: 5 / main-end;
-    font-size: 1.8rem;
+    grid-column: 4 / main-end;
     line-height: 3.1rem;
     display: flex;
     justify-content: center;
@@ -127,7 +126,8 @@ body {
     flex-direction: column;
     align-items: flex-start; }
   .about__mission {
-    margin: 5rem 0; }
+    margin: 5rem 0;
+    font-size: 1.7rem; }
     @media only screen and (max-width: 75em) {
       .about__mission {
         margin: 4rem 0; } }
@@ -144,7 +144,7 @@ body {
   display: block; }
   .form__inputs {
     display: grid;
-    grid-template-columns: repeat(2, 25vw);
+    grid-template-columns: repeat(2, 20vw);
     grid-template-rows: repeat(2, min-content);
     grid-gap: 2rem; }
   .form__text {
@@ -175,15 +175,15 @@ body {
   align-items: center; }
   .footer__container {
     height: 100%;
-    width: 30vw;
+    width: 25vw;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     flex-direction: column; }
   .footer__items {
-    width: 25vw;
+    width: 100%;
     display: flex;
-    justify-content: space-between; }
+    justify-content: space-evenly; }
   .footer__item {
     display: inline-block;
     position: relative;
@@ -283,7 +283,7 @@ body {
   .nav__item:not(:last-child) {
     margin-right: 5rem; }
   .nav__link:link, .nav__link:visited {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
     text-transform: uppercase;
     color: white;
     text-decoration: none;
@@ -321,10 +321,7 @@ body {
 
 .portfolio {
   display: grid;
-  grid-template-columns: 1.5fr [main-start] repeat(6, 1fr) [main-end] 1.5fr; }
-  @media only screen and (max-width: 87.5em) {
-    .portfolio {
-      grid-template-columns: 1.5fr [main-start] repeat(4, 1fr) [main-end] 1.5fr; } }
+  grid-template-columns: 1.5fr [main-start] repeat(4, 1fr) [main-end] 1.5fr; }
   @media only screen and (max-width: 50em) {
     .portfolio {
       grid-template-columns: 0.5fr [main-start] repeat(4, 1fr) [main-end] 0.5fr; } }
@@ -333,7 +330,7 @@ body {
   grid-column: main-start / main-end;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
-  grid-gap: 2rem; }
+  grid-gap: 3rem; }
   @media only screen and (max-width: 75em) {
     .cards {
       grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr)); } }
@@ -373,17 +370,23 @@ body {
     background-color: rgba(242, 242, 242, 0.9);
     transition: all 0.4s ease-in-out; }
     .card__content a {
+      font-size: 1.2rem;
+      line-height: 2.3rem;
+      padding: 0.5rem 1.5rem;
       transform: translateY(-3rem);
       transition: transform 0.4s ease-in-out; }
       @media only screen and (max-width: 62.5em) {
         .card__content a {
           font-size: 1rem;
           line-height: 1.9rem;
-          border: 1.1px solid #dc143c;
-          padding: 0.5rem 1.5rem; } }
+          border: 1.1px solid #dc143c; } }
   .card__description {
     transform: translateY(3rem);
-    transition: all 0.4s ease-in-out; }
+    transition: all 0.4s ease-in-out;
+    text-transform: capitalize;
+    color: #dc143c;
+    font-size: 1.2rem;
+    font-weight: 500; }
 
 .section-me {
   height: 80vh;

@@ -7,7 +7,7 @@
 
     &__inputs {
         display: grid;
-        grid-template-columns: repeat(2, 25vw);
+        grid-template-columns: repeat(2, 20vw);
         grid-template-rows: repeat(2, min-content);
         grid-gap: 2rem;
     }
