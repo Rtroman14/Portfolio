@@ -1,0 +1,70 @@
+.footer {
+    height: 25vh;
+    background-color: #0f0d22;
+    // @include flexCenter;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+
+    &__items {
+        width: 25vw;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__item {
+        display: inline-block;
+        position: relative;
+        overflow: hidden;
+        text-decoration: none;
+        background-color: $color-secondary;
+        border-radius: 30%;
+        padding: 0.8rem;
+
+        &::before {
+            content: "";
+            position: absolute;
+            width: 120%;
+            height: 120%;
+            background: $color-trim;
+            transform: rotate(45deg);
+            left: -110%;
+            top: 90%;
+        }
+
+        &:hover::before {
+            animation: aaa 0.7s 1;
+            top: -10%;
+            left: -10%;
+        }
+
+        &:hover .footer__icon {
+            fill: $color-secondary;
+            transform: scale(1.2);
+        }
+    }
+
+    &__icon {
+        fill: #0f0d22;
+
+        width: 2rem;
+        height: 2rem;
+        @include flexCenter;
+        transition: all 0.2s;
+    }
+
+    &__signature {
+        @include flexCenter;
+        color: #aaa;
+        font-size: 1.2rem;
+    }
+
+    &__line {
+        display: block;
+        border: 0;
+        width: 40vw;
+        height: 1px;
+        background-color: #aaa;
+    }
+}

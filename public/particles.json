@@ -1,0 +1,39 @@
+{
+    "particles": {
+        "number": {
+            "value": 100
+        },
+        "color": {
+            "value": "#fafafa"
+        },
+        "shape": {
+            "type": "circle",
+            "stroke": {
+                "width": 1,
+                "color": "#fafafa"
+            },
+            "image": {
+                "src": "https://text2image.com/user_images/201912/text2image_V9895576_20191231_4740.png"
+            }
+        },
+        "opacity": {
+            "value": 1,
+            "random": true,
+            "anim": {
+                "enable": true,
+                "speed": 1
+            }
+        },
+        "size": {
+            "value": 2,
+            "random": false,
+            "anim": {
+                "enable": false,
+                "speed": 1
+            }
+        },
+        "move": {
+            "speed": 2
+        }
+    }
+}

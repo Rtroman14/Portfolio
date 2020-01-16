@@ -1,0 +1,39 @@
+.contact {
+    @include flexCenter;
+}
+
+.form {
+    display: block;
+
+    &__inputs {
+        display: grid;
+        grid-template-columns: repeat(2, 25vw);
+        grid-template-rows: repeat(3, min-content);
+        grid-gap: 3rem;
+    }
+
+    &__text {
+        grid-column: 1 / -1;
+    }
+
+    &__input {
+        font-family: inherit;
+        width: 100%;
+        padding: 1rem;
+        border: none;
+        border-bottom: 2px solid black;
+        transition: all 0.3s;
+
+        &:focus {
+            outline: none;
+            box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+            border-bottom: 2px solid $color-trim;
+            transform: scale(1.005);
+        }
+    }
+
+    &__btn {
+        margin-top: 3rem;
+        @include flexCenter;
+    }
+}

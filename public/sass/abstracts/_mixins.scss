@@ -1,0 +1,26 @@
+@mixin absoluteCenter {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@mixin letterR {
+    display: inline-block;
+    color: $color-trim;
+
+    animation-name: moveInRight;
+    animation-duration: 1.5s;
+    animation-timing-function: ease-in;
+}
+
+@mixin flexCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin grid {
+    display: grid;
+    grid-template-columns: 1.5fr [ main-start ] repeat(6, 1fr) [ main-end ] 1.5fr;
+}

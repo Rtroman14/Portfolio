@@ -1,0 +1,37 @@
+// COLOR VARIABLES
+$color-primary: #eb2f64;
+// $color-secondary: #fafafa;
+$color-secondary: #f2f2f2;
+
+$color-trim: #dc143c;
+
+// --color-primary: #eb2f64;
+// --color-primary-light: #ff3366;
+// --color-primary-dark: #ba265d;
+
+$font-header: "Be Vietnam", sans-serif;
+
+// RESPONSIVE BREAKPOINTS
+$bp-xl: 87.5em; // 1400
+$bp-lg: 75em; // 1200 px
+$bp-md: 62.5em; // 1000 px
+$bp-sm: 50em; // 800 px
+$bp-xs: 37.5em; // 600 px
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+
+    @media only screen and (max-width: $bp-xl) {
+        font-size: 50%;
+    }
+}
