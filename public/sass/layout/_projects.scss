@@ -1,12 +1,24 @@
 .portfolio {
     @include grid;
+
+    @media only screen and (max-width: $bp-xl) {
+        grid-template-columns: 1.5fr [ main-start ] repeat(4, 1fr) [ main-end ] 1.5fr;
+    }
+
+    @media only screen and (max-width: $bp-sm) {
+        grid-template-columns: 0.5fr [ main-start ] repeat(4, 1fr) [ main-end ] 0.5fr;
+    }
 }
 
 .cards {
     grid-column: main-start / main-end;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
-    grid-gap: 3rem;
+    grid-gap: 2rem;
+
+    @media only screen and (max-width: $bp-lg) {
+        grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    }
 }
 
 .card {
@@ -57,6 +69,13 @@
         & a {
             transform: translateY(-3rem);
             transition: transform 0.4s ease-in-out;
+
+            @media only screen and (max-width: $bp-md) {
+                font-size: 1rem;
+                line-height: 1.9rem;
+                border: 1.1px solid $color-trim;
+                padding: 0.5rem 1.5rem;
+            }
         }
     }
 

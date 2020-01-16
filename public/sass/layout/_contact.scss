@@ -8,8 +8,8 @@
     &__inputs {
         display: grid;
         grid-template-columns: repeat(2, 25vw);
-        grid-template-rows: repeat(3, min-content);
-        grid-gap: 3rem;
+        grid-template-rows: repeat(2, min-content);
+        grid-gap: 2rem;
     }
 
     &__text {
@@ -21,7 +21,7 @@
         width: 100%;
         padding: 1rem;
         border: none;
-        border-bottom: 2px solid black;
+        border-bottom: 1.2px solid black;
         transition: all 0.3s;
 
         &:focus {
@@ -33,7 +33,7 @@
     }
 
     &__btn {
-        margin-top: 3rem;
+        margin-top: 8rem;
         @include flexCenter;
     }
 }

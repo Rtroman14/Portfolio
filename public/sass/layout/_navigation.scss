@@ -15,6 +15,10 @@
         list-style: none;
         margin-right: 15rem;
         display: flex;
+
+        @media only screen and (max-width: $bp-md) {
+            margin-right: 10rem;
+        }
     }
 
     &__item {
@@ -60,6 +64,14 @@
         color: $color-trim;
         margin-left: 15rem;
         transition: all 0.5s;
+
+        @media only screen and (max-width: $bp-md) {
+            margin-left: 10rem;
+        }
+
+        @media only screen and (max-width: $bp-sm) {
+            font-size: 6rem;
+        }
     }
 
     &--active {

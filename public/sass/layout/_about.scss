@@ -1,6 +1,10 @@
 .about {
     @include grid;
 
+    @media only screen and (max-width: $bp-sm) {
+        grid-template-columns: 0.5fr [ main-start ] repeat(6, 1fr) [ main-end ] 0.5fr;
+    }
+
     &__me {
         grid-column: main-start / span 3;
         @include flexCenter;
@@ -10,6 +14,14 @@
         height: 42rem;
         border-radius: 50%;
         box-shadow: -3rem 3rem 0 rgba($color-secondary, 1);
+
+        @media only screen and (max-width: $bp-xl) {
+            height: 39rem;
+        }
+
+        @media only screen and (max-width: $bp-sm) {
+            height: 36rem;
+        }
     }
 
     &__text {
@@ -24,5 +36,13 @@
     &__mission {
         // line-height: 3.1rem;
         margin: 5rem 0;
+
+        @media only screen and (max-width: $bp-lg) {
+            margin: 4rem 0;
+        }
+
+        @media only screen and (max-width: $bp-sm) {
+            margin: 3rem 0;
+        }
     }
 }

@@ -9,6 +9,10 @@ body {
     @include flexCenter;
     flex-direction: column;
     padding-bottom: 8rem;
+
+    @media only screen and (max-width: $bp-md) {
+        padding-bottom: 6rem;
+    }
 }
 
 .heading-primary {
@@ -16,6 +20,14 @@ body {
     font-size: 6rem;
     font-weight: 300;
     color: #fff;
+
+    @media only screen and (max-width: $bp-md) {
+        font-size: 5rem;
+    }
+
+    @media only screen and (max-width: $bp-sm) {
+        font-size: 4.5rem;
+    }
 }
 
 .heading-secondary {

@@ -24,6 +24,14 @@
         font-size: 7rem;
         color: $color-trim;
         animation-duration: 1.3s;
+
+        @media only screen and (max-width: $bp-md) {
+            font-size: 6rem;
+        }
+
+        @media only screen and (max-width: $bp-sm) {
+            font-size: 5.6rem;
+        }
     }
 
     &-2 {
@@ -33,5 +41,13 @@
         color: $color-trim;
         animation-duration: 1.3s;
         animation-delay: 0.4s;
+
+        @media only screen and (max-width: $bp-md) {
+            font-size: 6rem;
+        }
+
+        @media only screen and (max-width: $bp-sm) {
+            font-size: 5.6rem;
+        }
     }
 }
