@@ -8,11 +8,7 @@ body {
     grid-column: 1 / -1;
     @include flexCenter;
     flex-direction: column;
-    padding-bottom: 8rem;
-
-    @media only screen and (max-width: $bp-md) {
-        padding-bottom: 6rem;
-    }
+    padding-bottom: 6rem;
 }
 
 .heading-primary {
