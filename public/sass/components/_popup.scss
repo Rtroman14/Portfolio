@@ -1,0 +1,119 @@
+.popup {
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 9999;
+
+    // hide popup
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.5s;
+
+    // blur background of popup
+    backdrop-filter: blur(10px);
+
+    &__content {
+        @include absoluteCenter;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        width: 75%;
+        background: #fff;
+        box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.2);
+        border-radius: 3px;
+        overflow: hidden;
+
+        // hide content
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(0);
+        transition: all 0.5s 0.2s;
+    }
+
+    &__left {
+    }
+
+    &__image {
+        display: block;
+        width: 100%;
+    }
+
+    &__right {
+        padding: 1rem 5rem;
+        display: flex;
+        justify-content: space-evenly;
+        flex-direction: column;
+    }
+
+    &__heading {
+        padding-bottom: 3rem;
+    }
+
+    &__text {
+        font-size: 1.4rem;
+
+        hyphens: auto;
+    }
+
+    &:target {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    &:target &__content {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+    }
+
+    &__close {
+        &:link,
+        &:visited {
+            color: $color-trim;
+            position: absolute;
+            top: 2.5rem;
+            right: 2.5rem;
+            font-size: 3rem;
+            text-decoration: none;
+            display: inline-block;
+            line-height: 1;
+        }
+
+        &:hover {
+            color: darken($color-trim, 20%);
+        }
+    }
+
+    &__tech-text {
+        font-size: 1.6rem;
+        color: darken($color-secondary, 40%);
+        display: grid;
+        grid-template-columns: 1fr max-content 1fr;
+        grid-column-gap: 1.5rem;
+        align-items: center;
+
+        &::before,
+        &::after {
+            content: "";
+            height: 1px;
+            display: block;
+            background-color: darken($color-secondary, 40%);
+        }
+    }
+
+    &__tech-items {
+        color: darken($color-secondary, 40%);
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    &__tech-item {
+        font-size: 1.4rem;
+        list-style: none;
+        // text-transform: lowercase;
+    }
+
+    &__btn {
+        align-self: flex-start;
+    }
+}

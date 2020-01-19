@@ -7,9 +7,7 @@
 
     &__me {
         grid-column: main-start / span 2;
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
+        @include flexCenter;
     }
 
     &__pic {
@@ -37,7 +35,7 @@
     &__mission {
         // line-height: 3.1rem;
         margin: 4rem 0;
-        font-size: 1.7rem;
+        font-size: 1.8rem;
 
         @media only screen and (max-width: $bp-sm) {
             margin: 3rem 0;
