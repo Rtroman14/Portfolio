@@ -29,9 +29,10 @@
         opacity: 0;
         transform: translate(-50%, -50%) scale(0);
         transition: all 0.5s 0.2s;
-    }
 
-    &__left {
+        @media only screen and (max-width: $bp-sm) {
+            grid-template-columns: 1fr;
+        }
     }
 
     &__image {
@@ -44,6 +45,10 @@
         display: flex;
         justify-content: space-evenly;
         flex-direction: column;
+
+        @media only screen and (max-width: $bp-sm) {
+            padding: 4rem 5rem;
+        }
     }
 
     &__heading {
@@ -51,9 +56,12 @@
     }
 
     &__text {
-        font-size: 1.4rem;
-
+        font-size: 1.6rem;
         hyphens: auto;
+
+        @media only screen and (max-width: $bp-sm) {
+            padding: 2rem 0;
+        }
     }
 
     &:target {
@@ -71,9 +79,9 @@
         &:visited {
             color: $color-trim;
             position: absolute;
-            top: 2.5rem;
-            right: 2.5rem;
-            font-size: 3rem;
+            top: 0.5rem;
+            right: 2.1rem;
+            font-size: 4rem;
             text-decoration: none;
             display: inline-block;
             line-height: 1;
@@ -111,6 +119,9 @@
         font-size: 1.4rem;
         list-style: none;
         // text-transform: lowercase;
+    }
+
+    &__btns {
     }
 
     &__btn {

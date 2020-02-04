@@ -6,8 +6,6 @@
 .header {
     height: 100vh;
     background-image: url(../img/space-2.jpg);
-    // background-image: linear-gradient(to right bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    //     url(../img/half-dome.jpg);
     background-position: center;
     background-size: cover;
 
@@ -21,25 +19,33 @@
     &-1 {
         display: inline-block;
         font-family: brush-script-std, sans-serif;
-        font-size: 7rem;
+        font-size: 6rem;
         color: $color-trim;
         animation-duration: 1.3s;
 
         @media only screen and (max-width: $bp-sm) {
             font-size: 5.6rem;
         }
+
+        @media only screen and (max-width: $bp-xs) {
+            font-size: 4.7rem;
+        }
     }
 
     &-2 {
         display: inline-block;
         font-family: brush-script-std, sans-serif;
-        font-size: 7rem;
+        font-size: 6rem;
         color: $color-trim;
         animation-duration: 1.3s;
         animation-delay: 0.4s;
 
         @media only screen and (max-width: $bp-sm) {
             font-size: 5.6rem;
+        }
+
+        @media only screen and (max-width: $bp-xs) {
+            font-size: 4.7rem;
         }
     }
 }

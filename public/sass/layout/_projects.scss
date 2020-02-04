@@ -15,6 +15,10 @@
     @media only screen and (max-width: $bp-lg) {
         grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
     }
+
+    @media only screen and (max-width: $bp-xs) {
+        grid-gap: 4rem;
+    }
 }
 
 .card {
@@ -59,7 +63,7 @@
         opacity: 0;
         transform: scale(0.75);
         border-radius: 1rem;
-        background-color: rgba($color-secondary, 0.9);
+        background-color: rgba($color-secondary, 0.95);
         transition: all 0.4s ease-in-out;
 
         & a {
@@ -84,7 +88,7 @@
 
         text-transform: capitalize;
         color: $color-trim;
-        font-size: 1.5rem;
+        font-size: 2rem;
         font-weight: 500;
     }
 }

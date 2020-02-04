@@ -6,7 +6,7 @@ app.use(express.static("public"));
 app.use(express.static("views"));
 
 app.get("/", (req, res) => {
-    res.render("home");
+    res.render("index");
 });
 
 app.get("/about", (req, res) => {

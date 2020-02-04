@@ -5,9 +5,21 @@
         grid-template-columns: 0.5fr [ main-start ] repeat(6, 1fr) [ main-end ] 0.5fr;
     }
 
+    @media only screen and (max-width: $bp-xs) {
+        grid-row-gap: 8rem;
+    }
+
     &__me {
         grid-column: main-start / span 2;
         @include flexCenter;
+
+        @media only screen and (max-width: $bp-sm) {
+            grid-column: main-start / span 3;
+        }
+
+        @media only screen and (max-width: $bp-xs) {
+            grid-column: main-start / main-end;
+        }
     }
 
     &__pic {
@@ -30,6 +42,14 @@
         @include flexCenter;
         flex-direction: column;
         align-items: flex-start;
+
+        @media only screen and (max-width: $bp-sm) {
+            grid-column: 5 / main-end;
+        }
+
+        @media only screen and (max-width: $bp-xs) {
+            grid-column: main-start / main-end;
+        }
     }
 
     &__mission {
