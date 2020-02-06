@@ -1,8 +1,9 @@
-document.getElementsByClassName("popup").onclick = function() {
-    // document.getElementsByClassName("popup").style.opacity = 0;
-    // alert("hello");
-};
+let nav__nav = document.querySelector(".nav__nav");
+let checkbox = document.querySelector(".nav__toggle");
 
-document.querySelector(".popup").onclick = () => {
-    $(".popup").addClass("");
+// close collapsible nav when click outside of nav
+window.onclick = function(event) {
+    if (event.target == nav__nav) {
+        checkbox.checked = !checkbox.checked;
+    }
 };
