@@ -99,6 +99,7 @@
         grid-template-columns: 1fr max-content 1fr;
         grid-column-gap: 1.5rem;
         align-items: center;
+        margin-bottom: 1rem;
 
         &::before,
         &::after {
@@ -119,9 +120,6 @@
         font-size: 1.4rem;
         list-style: none;
         // text-transform: lowercase;
-    }
-
-    &__btns {
     }
 
     &__btn {

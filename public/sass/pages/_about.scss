@@ -1,4 +1,38 @@
 .section-me {
-    height: 80vh;
-    background-color: $color-secondary;
+    padding-top: 10rem;
+}
+
+.me {
+    padding: 0 35rem 10rem 35rem;
+
+    @media only screen and (max-width: $bp-xl) {
+        padding: 0 25rem 10rem 25rem;
+    }
+
+    &__pic {
+        height: 100%;
+
+        &-box {
+            position: relative;
+            overflow: hidden;
+            height: 38rem;
+            float: left;
+            border-radius: 50%;
+            margin-right: 2rem;
+            margin-bottom: 4rem;
+            shape-outside: ellipse(16rem 21rem at 53% 48%);
+            box-shadow: -3rem 3rem 0 rgba($color-secondary, 1);
+        }
+    }
+
+    &__text {
+        font-size: 1.8rem;
+        text-indent: 5rem;
+        margin: 1rem 0;
+    }
+
+    &__heading {
+        @include flexCenter;
+        padding: 3rem 0 2rem 0;
+    }
 }

@@ -1,15 +1,15 @@
 .btn {
     font-family: inherit;
     font-size: 1.2rem;
-    line-height: 2.1rem;
+    line-height: 2rem;
     font-weight: 600;
     text-decoration: none;
     color: $color-trim;
     background-color: transparent;
-    border: 1.5px solid $color-trim;
+    border: 1px solid $color-trim;
     padding: 0.5rem 1.5rem;
     display: inline-block;
-    border-radius: 20rem;
+    border-radius: 0.5rem;
     text-transform: uppercase;
     cursor: pointer;
     transition: all 0.15s ease;
