@@ -1,4 +1,4 @@
-let domain = "http://localhost:3000/";
+let domain = "https://ryanroman.herokuapp.com/";
 
 if (document.location.href == domain + "about") {
     $("nav").addClass("nav--active");
