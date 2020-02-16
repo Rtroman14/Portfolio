@@ -1,16 +1,17 @@
-if (document.location.href == "http://localhost:3000/about") {
+let domain = "http://localhost:3000/";
+
+if (document.location.href == domain + "about") {
     $("nav").addClass("nav--active");
-    $("a[href='#home']").attr("href", "http://localhost:3000/");
-    $("a[href='#about']").attr("href", "http://localhost:3000/#about");
-    $("a[href='#portfolio']").attr("href", "http://localhost:3000/#portfolio");
-    $("a[href='#contact']").attr("href", "http://localhost:3000/#contact");
+    $("a[href='#home']").attr("href", domain);
+    $("a[href='#about']").attr("href", domain + "#about");
+    $("a[href='#portfolio']").attr("href", domain + "#portfolio");
+    $("a[href='#contact']").attr("href", domain + "#contact");
 }
 
 $(document).scroll(() => {
     if (
         $(window).scrollTop() == 0 &&
-        (document.location.href == "http://localhost:3000/" ||
-            document.location.href == "http://localhost:3000/#home")
+        (document.location.href == domain || document.location.href == domain + "#home")
     ) {
         $("nav").removeClass("nav--active");
     } else {
