@@ -297,7 +297,7 @@ body {
         width: 35vw; } }
     @media only screen and (max-width: 37.5em) {
       .footer__container {
-        width: 60vw; } }
+        width: 75vw; } }
   .footer__items {
     width: 100%;
     display: flex;
