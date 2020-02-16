@@ -3,10 +3,22 @@
 }
 
 .me {
-    padding: 0 35rem 10rem 35rem;
+    padding: 0 30rem 10rem 30rem;
 
     @media only screen and (max-width: $bp-xl) {
         padding: 0 25rem 10rem 25rem;
+    }
+
+    @media only screen and (max-width: $bp-md) {
+        padding: 0 20rem 10rem 20rem;
+    }
+
+    @media only screen and (max-width: $bp-sm) {
+        padding: 0 15rem 10rem 15rem;
+    }
+
+    @media only screen and (max-width: $bp-xs) {
+        padding: 0 5rem 10rem 5rem;
     }
 
     &__pic {
@@ -15,13 +27,29 @@
         &-box {
             position: relative;
             overflow: hidden;
-            height: 38rem;
+            height: 30rem;
             float: left;
             border-radius: 50%;
-            margin-right: 2rem;
+            margin-right: 1rem;
             margin-bottom: 4rem;
-            shape-outside: ellipse(16rem 21rem at 53% 48%);
+            shape-outside: ellipse(14rem 17rem at 47% 47%);
             box-shadow: -3rem 3rem 0 rgba($color-secondary, 1);
+
+            @media only screen and (max-width: $bp-md) {
+                height: 29rem;
+                margin-right: 2rem;
+                margin-bottom: 2rem;
+            }
+
+            @media only screen and (max-width: $bp-sm) {
+                height: 22rem;
+                shape-outside: ellipse(10rem 12rem at 46% 47%);
+                box-shadow: -2rem 2rem 0 rgba($color-secondary, 1);
+            }
+
+            @media only screen and (max-width: $bp-sm) {
+                height: 20rem;
+            }
         }
     }
 

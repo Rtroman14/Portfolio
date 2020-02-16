@@ -1,14 +1,19 @@
 if (document.location.href == "http://localhost:3000/about") {
     $("nav").addClass("nav--active");
+    $("a[href='#home']").attr("href", "http://localhost:3000/");
+    $("a[href='#about']").attr("href", "http://localhost:3000/#about");
+    $("a[href='#portfolio']").attr("href", "http://localhost:3000/#portfolio");
+    $("a[href='#contact']").attr("href", "http://localhost:3000/#contact");
 }
 
-// add class "nav--active" if at top of home page
-if (document.location.href == "http://localhost:3000/") {
-    $(window).on("scroll", () => {
-        if ($(window).scrollTop()) {
-            $("nav").addClass("nav--active");
-        } else {
-            $("nav").removeClass("nav--active");
-        }
-    });
-}
+$(document).scroll(() => {
+    if (
+        $(window).scrollTop() == 0 &&
+        (document.location.href == "http://localhost:3000/" ||
+            document.location.href == "http://localhost:3000/#home")
+    ) {
+        $("nav").removeClass("nav--active");
+    } else {
+        $("nav").addClass("nav--active");
+    }
+});

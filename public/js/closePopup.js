@@ -4,11 +4,11 @@ let popup = document.querySelector(".popup");
 let popupContent = document.querySelector(".popup__content");
 
 // // close collapsible nav when click outside of nav
-// window.onclick = function(event) {
-//     if (event.target == nav__nav) {
-//         checkbox.checked = !checkbox.checked;
-//     }
-// };
+window.onclick = function(event) {
+    if (event.target == nav__nav) {
+        checkbox.checked = !checkbox.checked;
+    }
+};
 
 // // close popup
 // window.onclick = function(event) {
@@ -18,3 +18,6 @@ let popupContent = document.querySelector(".popup__content");
 //         popup.style.visibility = "hidden";
 //     }
 // };
+
+// ABOUT ME PAGE LINKS
+// ===========================
