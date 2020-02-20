@@ -2,7 +2,6 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const exphbs = require("express-handlebars");
 const nodemailer = require("nodemailer");
-const smtpTransport = require("nodemailer-smtp-transport");
 require("dotenv").config();
 
 const app = express();
@@ -38,29 +37,19 @@ app.post("/send", (req, res) => {
     <p>Message: ${req.body.message}</p>
     `;
 
-    // let transporter = nodemailer.createTransport({
-    //     service: "gmail",
-    //     // host: "smtp.gmail.com",
-    //     port: 465,
-    //     secure: true,
-    //     auth: {
-    //         user: process.env.GMAIL_USERNAME_SENDER,
-    //         pass: process.env.GMAIL_PASSWORD_SENDER
-    //     }
-    // });
-
-    let transporter = nodemailer.createTransport(
-        smtpTransport({
-            service: "gmail",
-            host: "smtp.gmail.com",
-            // port: 465,
-            // secure: true,
-            auth: {
-                user: process.env.GMAIL_USERNAME_SENDER,
-                pass: process.env.GMAIL_PASSWORD_SENDER
-            }
-        })
-    );
+    let transporter = nodemailer.createTransport({
+        // service: "gmail",
+        host: "smtp.gmail.com",
+        port: 465,
+        secure: true,
+        auth: {
+            user: process.env.GMAIL_USERNAME_SENDER,
+            pass: process.env.GMAIL_PASSWORD_SENDER
+        },
+        tls: {
+            rejectUnauthorized: false
+        }
+    });
 
     let mailOptions = {
         from: process.env.GMAIL_USERNAME_SENDER,
