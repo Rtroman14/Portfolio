@@ -35,14 +35,14 @@ app.post("/send", (req, res) => {
     let transporter = nodemailer.createTransport({
         service: "gmail",
         auth: {
-            user: process.env.USER || USERNAME,
-            pass: process.env.PASS || PASSWORD
+            user: USERNAME,
+            pass: PASSWORD
         }
     });
 
     let mailOptions = {
-        from: process.env.USER || USERNAME,
-        to: process.env.GMAIL || GMAIL,
+        from: USERNAME,
+        to: GMAIL,
         subject: "Portfolio Website Contact Request",
         html: output
     };
