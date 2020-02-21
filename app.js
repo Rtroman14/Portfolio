@@ -1,14 +1,9 @@
 const express = require("express");
 const bodyParser = require("body-parser");
-const exphbs = require("express-handlebars");
 const nodemailer = require("nodemailer");
 require("dotenv").config();
 
 const app = express();
-
-// view engine setup
-app.engine("handlebars", exphbs());
-// app.set("view engine", "handlebars");
 
 // body parser middleware
 app.use(bodyParser.urlencoded({ extended: false }));
