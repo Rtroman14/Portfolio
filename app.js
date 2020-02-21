@@ -38,19 +38,16 @@ app.post("/send", (req, res) => {
     `;
 
     let transporter = nodemailer.createTransport({
-        // service: "gmail",
-        host: "smtp.gmail.com",
-        port: 587,
-        secure: false,
+        service: "gmail",
         auth: {
-            user: process.env.GMAIL_USERNAME_SENDER,
-            pass: process.env.GMAIL_PASSWORD_SENDER
+            user: "ryanroman14@gmail.com",
+            pass: "Ryan1048!"
         }
     });
 
     let mailOptions = {
-        from: process.env.GMAIL_USERNAME_SENDER,
-        to: process.env.GMAIL_USERNAME_SENDEE,
+        from: "ryanroman14@gmail.com",
+        to: "rtroman14@gmail.com",
         subject: "Portfolio Website Contact Request",
         html: output
     };
@@ -71,3 +68,7 @@ let port = process.env.PORT || 3000;
 app.listen(port, () => console.log("Portfolio server has started!"));
 
 // <%= msg %>
+
+// console.log(process.env.USERNAME);
+// console.log(process.env.PASSWORD);
+// console.log(process.env.USERNAME);
