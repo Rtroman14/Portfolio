@@ -34,15 +34,26 @@ app.post("/send", (req, res) => {
 
     let transporter = nodemailer.createTransport({
         service: "gmail",
+        // auth: {
+        //     user: process.env.USERNAME,
+        //     pass: process.env.USERNAME
+        // }
         auth: {
-            user: process.env.USERNAME,
-            pass: process.env.USERNAME
+            user: "ryanroman14@gmail.com",
+            pass: "Ryan1048!"
         }
     });
 
+    // let mailOptions = {
+    //     from: process.env.USERNAME,
+    //     to: process.env.GMAIL,
+    //     subject: "Portfolio Website Contact Request",
+    //     html: output
+    // };
+
     let mailOptions = {
-        from: process.env.USERNAME,
-        to: process.env.GMAIL,
+        from: "ryanroman14@gmail.com",
+        to: "rtroman14@gmail.com",
         subject: "Portfolio Website Contact Request",
         html: output
     };
