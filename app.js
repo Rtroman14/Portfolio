@@ -21,6 +21,10 @@ app.get("/about", (req, res) => {
     res.render("about");
 });
 
+app.get("/resume", (req, res) => {
+    res.sendfile(__dirname + "/public/img/Resume.pdf");
+});
+
 app.post("/send", (req, res) => {
     const output = `
     <p>You have a new contact request!</p>
