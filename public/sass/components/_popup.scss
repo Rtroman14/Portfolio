@@ -123,7 +123,15 @@
         // text-transform: lowercase;
     }
 
-    &__btn {
-        align-self: flex-start;
+    &__btns {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__icon {
+        width: 4rem;
+        height: 4rem;
+        @include flexCenter;
     }
 }

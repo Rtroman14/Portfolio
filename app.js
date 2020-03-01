@@ -25,6 +25,18 @@ app.get("/resume", (req, res) => {
     res.sendfile(__dirname + "/public/img/Resume.pdf");
 });
 
+app.get("/Certificate-Advanced-CSS-and-Sass", (req, res) => {
+    res.sendfile(__dirname + "/public/img/Certificate-Advanced-CSS-Sass.pdf");
+});
+
+app.get("/Certificate-Web-Developer-Bootcamp", (req, res) => {
+    res.sendfile(__dirname + "/public/img/Certificate-Web-Developer-Bootcamp.pdf");
+});
+
+app.get("/Certificate-Automate-the-Boring-Stuff", (req, res) => {
+    res.sendfile(__dirname + "/public/img/Certificate-Automate-the-Boring-Stuff.pdf");
+});
+
 app.post("/send", (req, res) => {
     const output = `
     <p>You have a new contact request!</p>
