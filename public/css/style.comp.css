@@ -185,8 +185,16 @@ body {
   .popup__tech-item {
     font-size: 1.4rem;
     list-style: none; }
-  .popup__btn {
-    align-self: flex-start; }
+  .popup__btns {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; }
+  .popup__icon {
+    width: 4rem;
+    height: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
 
 .about {
   display: grid;
